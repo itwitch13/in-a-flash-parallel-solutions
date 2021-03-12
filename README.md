@@ -1,1 +1,1 @@
-# in-a-flash-parallel-solutions
+# 'in a flash' - parallel solutions
