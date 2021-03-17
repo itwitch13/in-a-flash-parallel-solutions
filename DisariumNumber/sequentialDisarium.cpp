@@ -35,7 +35,7 @@ int disarium_number(int number){
 }
 
 void save_arrays_to_file(int checked[], int numbers[], int array_size){
-    ofstream out_myfile ("./disarium.txt");
+    ofstream out_myfile ("../disarium.txt");
 
     for(int i=0; i < array_size; ++i){
         out_myfile << numbers[i] << " " << checked[i];
