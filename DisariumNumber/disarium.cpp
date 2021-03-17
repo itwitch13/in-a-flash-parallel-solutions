@@ -34,6 +34,16 @@ int disarium_number(int number){
     return counter;
 }
 
+void save_arrays_to_file(int checked[], int numbers[], int array_size){
+    ofstream out_myfile ("./disarium.txt");
+
+    for(int i=0; i < array_size; ++i){
+        out_myfile << numbers[i] << " " << checked[i];
+        out_myfile << '\n' ;
+
+    }
+    out_myfile.close();
+}
 
 int main(int argc, char* argv[]) {
     int thread_num;
@@ -42,6 +52,7 @@ int main(int argc, char* argv[]) {
         std::cout << "Usage: " << argv[0] << " thread_number";
         return 1;
     }
+
     if(argc == 2){
         thread_num = stoi(argv[1]);
     }
@@ -62,6 +73,7 @@ int main(int argc, char* argv[]) {
         }
     }
 
+    save_arrays_to_file(checked, numbers, array_size);
 
     return 0;
 }
